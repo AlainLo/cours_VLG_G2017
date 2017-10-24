@@ -1,0 +1,114 @@
+/*1ère partie*/
+body{
+    background: #dea;/*raccourci de #ddeeaa*/
+    margin: 10px 0;
+    padding: 0;
+    text-align: center;
+    font-family: 'PT Sans', sans-serif;
+}
+div#conteneur{
+    width: 770px;/*largeur de mon ID*/
+    margin: 0 auto;/*marge automatique qui centre la div après l'avoir remonté le plus haut possible dans mon affichage*/
+    text-align: left;/*centre le contenu de mon #conteneur*/
+    border: 2px solid #ab4;/*bordure extérieure*/
+    background: #fff;/*couleur de fond du #conteneur*/
+}
+h1#header{
+    height: 258px;/*on personnalise la hauteur du titre H1*/
+    background: url(../img/apple.jpg) no-repeat left top;
+    margin: 0;
+    }
+/*3ème partie*/
+    h1#header a{/*on donne les mêmes dimensions aux liens, chose possible grâce à la propriété display et la valeur block; qui transforme les liens en éléments de type block auxquels on peut appliquer des propriétés de taille. On positionne aussi l'image de fond qui a les mêmes dimensions que le cadre ainsi créé.*/
+        width: 400px;
+        height: 70px;
+        display: block;
+        background: url(../img/title.gif) no-repeat;
+        position: relative;
+        left: 350px;
+        top: 15px;
+        text-indent: -5000px;/*le text-indent négatif est fait pour pouvoir cacher le texte hors de la page, ce que nous voulons pour ne pas l'avoir devant notre image*/
+    }
+ul{
+    height: 35px;/*on donne une hauteur au menu, correspondant à la taille de l'image utilisée en fond*/
+    margin: 0;
+    padding: 0;
+    background: url(../img/bg_menu.gif) repeat-x 0 -25px;/*on met ensuite l'image de fond avec un décalage de 25px vers le haut*/
+    list-style-type: none;/*on cache les puces*/
+    }
+    ul li{
+        float: left;/*on rend les <li> flottants pour les afficher horizontalement*/
+        text-align: center;
+        }
+        ul li a{
+            width: 130px;/*largeur*/
+            line-height: 25px;/*hauteur de ligne*/
+            font-size: 1.2em;/*taille de police*/
+            font-weight: bold;/*mise en gras de la police*/
+            letter-spacing: 2px;/*espacement des lettres*/
+            color: #fff;/*couleur du texte*/
+            display: block;/*en changeant la propriété des <a> en block on peut les dimensionner comme on veut*/
+            text-decoration: none;/*on enlève le souligné que les navigateurs appliquent par défaut*/
+            border-right: 2px solid #dea;/*bordure*/
+            }
+            ul li a:hover{
+                background: url(../img/bg_menu.gif) repeat-x 0 0;/*on décale l'image de fond au passage de la souris*/
+            }
+
+/*2ème partie*/
+div#contenu{
+    padding: 0 30px 0 100px;
+    background-image: url(../img/bg_page.gif);
+    background-repeat: no-repeat;
+    background-position: 15px 15px;/*créé un espace et à gauche et à droite de l'image*/
+    }
+    div#contenu h2{/*mise en forme du titre de page H2*/
+        padding-left: 25px;/*on décale le texte en fonction de l'image*/
+        line-height: 25px;/*on décale le texte en fonction de l'image avec un interligne (hauteur de ligne)*/
+        font-size: 1.4em;/*taille de police*/
+        background: url(../img/little_apple.gif) no-repeat left bottom;
+        color: #9b2;/*couleur du texte*/
+        border-bottom: 1px solid #9b2;/*bordure du bas en couleur*/
+    }
+    div#contenu h3{
+        margin-left: 15px;
+        padding-left: 5px;
+        border-bottom: 1px solid #9b2;
+        border-left: 1px solid #9b2;
+        color: #9b2;
+    }
+    div#contenu p{
+        text-align: justify;/*alignement justifié*/
+        text-indent: 2em;/*indentation plus grande que à l'affichage par défaut pour aérer le texte*/
+        line-height: 1.7em;/*hauteur de ligne plus aérée aussi*/
+    }
+    /*div#contenu a{
+        /*mise en forme des liens de la page*/
+        /*color: #8a0;*/
+        /*}
+        div#contenu a:hover{
+            color: #9b2;
+        }*/
+p#footer{
+    margin: 0;
+    padding-right: 10px;
+    line-height: 30px;
+    text-align: right;
+    color: #8a0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*fin*/

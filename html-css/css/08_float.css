@@ -1,0 +1,28 @@
+div{
+    margin: 50px 0 0 50px;
+}
+
+img{
+    height: 200px;/*hauteur*/
+    width: 280px;/*largeur*/
+    border: 5px double orchid;/*taille, style, couleur de la bordure*/
+    margin: 15px;
+    /*display: block;*/
+    float: left;/*effet flottant, permet de placer des balises côte à côte alors que selon le flux du web standard les éléments se placent les uns au-dessus des autres.*/
+    transition: margin 0.5s;
+    }
+    img:hover{/*la pseudo-classe :hover modifie un affichage au survol de la souris*/
+        margin-top: 3px;
+    }
+.clear{
+    clear: both;/*supprime l'effet flottant*/
+}
+
+
+p{
+    background-color: red;
+    /*display: inline;*/
+    }
+    P span{
+        background-color: yellow;
+    }

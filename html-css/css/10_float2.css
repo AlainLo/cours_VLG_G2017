@@ -1,0 +1,20 @@
+.c1, .c2{
+    height: 80px;/*hauteur*/
+    width: 80px;/*largeur*/
+    border: 1px solid;/*si on ne met pas la 3ème valeur la couleur du trait sera par défaut noire*/
+    margin: 2px;
+    float: left;
+    border-radius: 20%;
+    text-align: center;
+    padding-top: 2px;
+    font-size: 50px;
+}
+.clear{
+    clear: both;
+}
+.c1{
+    background-color: #7a43e0;
+}
+.c2{
+    background-color: #43e07a;
+}

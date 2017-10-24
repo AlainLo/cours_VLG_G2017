@@ -1,0 +1,78 @@
+<!Doctype html>
+<html lang="fr">
+	<!-- la balise "lang" est maintenant obligatoire. son absence sera considérée comme une erreur par le w3C-->
+	<head><!-- En-tête du document -->
+		<title> ma page structure </title>
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat|PT+Sans|Roboto+Condensed" rel="stylesheet"> 
+		<meta name="description" content="Ma première page en HTML/CSS">
+		<!-- le contenu de la balise "content" est utilisé par le moteur de recherche comme commentaire dans la page de résultats.
+		C'est le moyen de donner un descriptif plus pertinent que ce qui serait pris en considération sinon, c'est à dire le contenu de la page d'accueil. 
+		C'est donc un des premiers éléments du référencement "naturel" du site-->
+		<meta charset="utf-8">
+	</head>
+
+	<body><!-- corps du document -->
+		<header>
+				<!-- zone du haut, ex: bannière, logo, slogan-->
+				<div id="logo">
+					<a href="index.html"><img src="img/logo.png" alt="logo html5-css3"></a>
+				</div>
+				<div id="slogan">
+					<h1>Mon premier site en HTML/CSS</h1>
+				</div>
+				<div id="reseauxSociaux">
+					<a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+					<a href="https://www.twitter.com" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+					<a href="https://www.instagram.com"target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+				</div>
+				<div class="clear"></div>
+		</header>
+		
+		<nav>
+					<a href="index.html"class="active"> Structure</a>
+					<a href="texte.html">Texte</a>
+					<a href="selecteur.html">Sélecteurs</a>
+					<a href="images.html">Images</a>
+					<a href="positions.html">Positions</a>
+					<a href="zoning.html">zoning</a>
+					<a href="tableaux.html">tableaux</a>
+					<a href="listes.html">Listes</a>
+					<a href="liens_et_menus.html">Lien & Menu</a>
+					<a href="formulaire.html">Formulaire</a>
+					<a href="multimedia.html">Multimedia</a>
+					<a href="animation.html">Animations</a>
+			<!-- zone du menu , les liens pour naviguer sur le site, 
+			du formulaire de recherche éventuellement-->
+		</nav>
+		<main>
+			<!-- contenu principal de la page (en principe)-->
+			<aside>
+				<!-- zone de contenu secondaire -normalement - sur le côté-->
+			</aside>
+			<section>
+				<!-- zone de contenu : titre texte, regroupement thématique-->
+				<div>
+					<!-- zone supplémentaire de contenu - balise générique de type block : 
+					donc s'étalant sur toute la largeur de leur conteneur 
+					et venant se mettre les unes en dessous des autres -->
+				</div>
+				<span>
+					<!-- zone supplémentaire de contenu - balise générique de type inline : 
+					donc s'étalant sur toute la largeur du contenu 
+					et venant se mettre les unes à côté des autres -->
+				</span>
+				<article>
+					<!-- zone supplémentaire (sous-catégorie a priori) du regroupement thématique -->
+				</article>
+			</section>
+		</main>
+		<footer>
+			<!-- balise sémantique -zone du bas, ex : liens administratifs, mentions légales, plan du site, CGU, CGV, contact, copyright-->
+		</footer>
+
+		
+		
+	</body>
+</html>

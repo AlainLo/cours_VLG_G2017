@@ -1,0 +1,631 @@
+/********************************************************* CSS Reset*******************************************************************
+par défaut, tous les blocs ont une marge. 
+par défaut (sans instruction préalable donnée au BODY, une marge apparaît. 
+Pour s'abstraire des valeurs par défaut, on peut mettre un css"reset" comme ci-dessous :
+ http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/***************************** fin CSS Reset*******************************/
+html{
+	margin:0;
+  padding:0;
+  background: url(img/imgfond.jpg) no-repeat center fixed; 
+  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  background-size: cover; /* version standardisée */
+}
+/*********************************header***************************/
+header{
+		background:transparent;
+		width: 100%;
+		height:100px;
+}
+#logo{
+	 float: left;
+	 display: block;
+	 padding: 2px;
+	 text-align: center;
+	 width: 25%;
+	 height: 110%;
+	 box-sizing: border-box;
+	
+ }
+#logo img[src="img/logo.png"]{
+	 margin:0;
+ }
+#slogan{
+	 width: 50%;
+	 display: block;
+	 float: left;
+	 background:transparent;
+	 height: 100%;
+	 padding: 40px;
+	 box-sizing: border-box;
+	 color: white;
+ }
+#reseauxSociaux{
+	 width: 25%;
+	 display: block;
+	 float: left; 
+	 background:transparent; 
+	 box-sizing: border-box;
+	 height: 100%;
+ }
+#reseauxSociaux i{
+	 font-size: 25px;
+	 color: #2980b9;
+	 display: block; 
+	 text-align: right;
+	 margin:10px 10px 0 0;
+ }
+#reseauxSociaux i:hover{
+	 color: white;
+ }
+/* ******************************fin code header *****************************/
+
+/************************************code nav*********************************/
+nav{
+	text-align: left;
+	background:#2c3e50;
+	height: 50px;
+	border-bottom: 2px solid red;
+	padding:2px;
+}
+nav a{
+	display: inline-block;
+	background:#2c3e50;	
+	position: relative;
+	top: 4px;
+	border-radius: 6px;
+	border: 2px inset white;
+	padding: 5px;
+	margin: 3px;
+	color: white;
+	font-size: 15px;
+	text-decoration: none;
+	font-weight: bold;	
+}
+nav a:hover{
+	background:#2994B2;
+	color: #2c3e50;
+	transition: 0,5s;
+}
+nav a:active{
+	background: yellow;
+	}
+.active{
+	background:orange;
+	color:#ecf0f1;
+}
+/************************************fin code nav*********************************/	
+
+/************************************code body*********************************/	
+ul{
+	font-weight: bold;
+}
+h1{
+	text-align: center;
+	font: 24px Bold PTsans, sans-serif;
+}
+h2{
+	text-align: center;
+	font: 18px Bold PTsans, sans-serif;
+	font-weight: 800;	
+}
+span{
+	font-weight: 600;
+	color: darkgrey;
+}
+i{
+	font-style:italic;
+}
+.line-height{
+	line-height: 0.5em;
+}
+body, aside{
+	text-align: center;
+	margin: 0 auto;
+	padding: 5px;
+	font: 16px 'Titillium Web', sans-serif ;
+}
+body{
+	background: transparent;
+	width: 980px;
+}
+
+/************************************************************début code top***********************************************************/
+
+.top{
+	background: transparent;
+	width: 100%;
+	height: 300px;
+	float: left;
+	box-sizing: border-box;
+}
+/******************* SLIDESHOW***********************/
+#slideshow {
+	position: relative;    /*le parent positionné*/
+	width: 328px;          /*limite en largeur (1 élément du slideshow)*/
+	height: 248px;         /*limite en hauteur*/
+	margin: 5px;
+	overflow: hidden;      /*on cache ce qui déborde*/
+}
+#sContent {
+	position: absolute;   /*on sort l'élément du flux*/
+	top: 0;               /*on le positionne précisément dans ...*/
+	left: 0;              /*l'angle haut gauche de son parent positionné*/
+	width: 345px;         /*ou 300% car 3 éléments*/
+	margin: 0;            
+	padding: 0;
+	z-index: 10;
+	
+	/*CSS3 transition*/
+  -webkit-transition: all 1s;
+	-moz-transition: all 1s;
+	-o-transition: all 1s;
+	transition: all 1s;
+}
+#sContent li {
+	display: inline;      /*on aligne les éléments du slideshow*/
+}
+
+#slideshow .next, #slideshow .prev {
+	position: absolute;
+	top: 65px;
+	z-index: 20;
+}
+#slideshow .prev { left: 35; }
+#slideshow .next { right: 0; }
+
+/* initialisation */
+#slideshow .next, #slideshow .prev {
+	display: none; 
+	}
+#slideshow .next1 {
+	display: block;
+	}
+
+/* Vers 1ère étape */
+#s1:target #sContent { left: 0px; }
+#s1:target .next, #s1:target .prev {
+	display: none;
+	}
+#s1:target .next1 { 
+	display: block; }
+
+/* Vers 2ème étape */
+#s2:target #sContent {
+	left: -150px; 
+	} /*ou -100%*/
+#s2:target .next, #s2:target .prev {
+	display: none; 
+	}
+#s2:target .next2, #s2:target .prev2 {
+	display: block;
+	}
+
+/* Vers 3ème étape */
+#s3:target #sContent {
+	left: -300px;
+	} /*ou -200%*/
+#s3:target .next, #s3:target .prev { 
+	display: none;
+	}
+#s3:target .prev3 { 
+display: block; 
+}
+
+/************************************FIN SLIDESHOW***************************************/
+/************************************************************fin  code top***********************************************************/
+
+/************************************************************début code aside***********************************************************/
+aside{
+	background: #006e2e;
+	opacity: 0.8;
+	width: 20%;
+	float: left;
+	height: 100%;
+	padding: 5px;
+	border:  2px 0px 2px 0px solid red;
+	box-sizing: border-box;
+	font-weight: 600;
+}
+aside a{
+	text-decoration: none;
+	color: white;
+}
+/******************************************************fin code aside***********************************************************/
+
+/******************************************************débutcode main***********************************************************/
+.main{
+	display: block;
+	background: white;
+	text-align: left;
+	width: 80%;
+	float: left;
+	box-sizing: border-box;
+}
+
+.exppro{
+	display: block;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#140e04+0,16160a+16,9ab9bc+100 */
+	background: #140e04; /* Old browsers */
+	background: -moz-linear-gradient(top, #140e04 0%, #16160a 16%, #9ab9bc 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #140e04 0%,#16160a 16%,#9ab9bc 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #140e04 0%,#16160a 16%,#9ab9bc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#140e04', endColorstr='#9ab9bc',GradientType=0 ); /* IE6-9 */
+	margin:0 auto;
+	height: 480px;
+	width: 100%;
+	padding: 10px 10px;
+	box-sizing: border-box;
+}
+/****
+.exppro ul li ul{
+	padding: 0.7em;
+	list-style: none;
+	
+}
+.exppro ul li ul li{
+	display: none;
+}
+.exppro ul li ul li:hover{
+	display: block;
+	width: 90%;
+}
+***/
+/************************************info bulle - CSS***************************************/
+.infoBulle{
+	height: auto;
+	width: 100%;
+	margin: auto;
+	padding-top: 15px;
+	background: transparent;
+	display: block;
+}
+.infoBulle p{
+	text-align: left;
+	padding-top: 15px;
+}
+.infoBulle i{
+	font-size: 0.9em;
+	line-height: 0.9em;
+}
+.infoBulle h2{
+	color:white;
+	text-shadow: 0 -2px 0 black;
+}
+.infoBulle a{
+	color:#ccc;
+	text-shadow: 0 -2px 0 black;
+	text-decoration: none;
+	border-radius: 3px;
+	padding: 5px 15px;
+}
+.infoBulle a:hover{
+	text-shadow: 0 1px 2px black;
+	background: rgba(0, 0, 0, .4);
+	box-shadow: 0 1px 0 rgba(255,255,255,.4);
+	color: #fff;
+}
+.infoBulle a span{
+	position: absolute;
+	padding: 15px 10px 15px 15px;
+	margin-top: 23px;
+	margin-left: -35px;
+	background: rgba(0,0,0,.9);
+	opacity: 0;
+	transform: scale(0) rotateZ(-12deg);
+	transition: .25s;
+	border-radius: 3px;
+	box-shadow: 0 0 2px rgba(0, 0, 0, .5);
+	width:73%;
+	
+}
+.infoBulle a span.charares{
+	color:red;
+	left:25%;
+}
+.infoBulle a span.charextra{
+	color:yellow;
+	left:25%;
+}
+.infoBulle a span.charcer{
+	color:purple;
+	left:25%;
+}
+.infoBulle a span.respob{
+	color:#09c;
+	left:25%;
+}
+.infoBulle a span.aepp1{
+	color:green;
+	left:25%;
+	margin-top: 5px;
+}
+.infoBulle a span.aepp2{
+	color:green;
+	left:25%;
+	margin-top: 5px;
+}
+.infoBulle a span .aepp2 .br{
+	line-height: 5px;
+}
+.infoBulle a span.raddia{
+	color:orange;
+	left:25%;
+	margin-top: 5px;
+}
+.infoBulle a span.etapp{
+	color:orange;
+	left:25%;
+	margin-top: 5px;
+}
+.infoBulle a span.journsta{
+	color:lightblue;
+	left:25%;
+	margin-top: 5px;
+}
+.infoBulle a span.journpro{
+	color:orange;
+	left:25%;
+	margin-top: 5px;
+}
+.infoBulle a:hover span{
+	opacity: 1;
+	transform: scale(1) rotateZ(0);
+}
+.infoBulle a span:before{ /*le "petit triangle" de l'infobulle*/
+	content:'';
+	position: absolute;
+	top: -6px;
+	left: 10px;
+	border-bottom:6px solid rgba(0,0,0,.9);
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+}
+	
+	/************************************fin info bulle - CSS***************************************/
+	
+.form{
+	display: block;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#140e04+0,4f4a24+16,9ab9bc+100 */
+background: #140e04; /* Old browsers */
+background: -moz-linear-gradient(top, #140e04 0%, #4f4a24 16%, #9ab9bc 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #140e04 0%,#4f4a24 16%,#9ab9bc 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #140e04 0%,#4f4a24 16%,#9ab9bc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#140e04', endColorstr='#9ab9bc',GradientType=0 ); /* IE6-9 */
+	margin:0 auto;
+	height:auto;
+	width: 100%;
+	padding: 10px 10px;
+	box-sizing: border-box;
+}
+.infoBulle a span.coursweb{
+	color:brown;
+	left:25%;
+	margin-top: 5px;
+}
+.infoBulle a span.deacom{
+	color:white;
+	left:25%;
+	margin-top: 5px;
+}
+.form ul li{
+	padding: 0.7em;
+}
+.plus{
+	display: block;
+	background:/*#000 /* <- possibilité d'appliquer un fond de couleur à l'image*/url("img/postit.png")repeat-3; /* <- sans le "no-repeat", l'image fonctionnera comme un motif et se répétera
+	jusqu'à couvrir toute la largeur de la page*/
+	/*background-size:cover; <- l'image est étirée pour couvrir toute la largeur de la page*/
+	margin:0 auto;
+	height:100%;
+	width: 100%;
+	padding: 10px 10px;
+	box-sizing: border-box;
+	font-size: 80%;
+}
+.plus1{
+	display: block;
+	width: 33.33%;
+	float: left;
+	background: #006e2e 0.7;
+	padding: 10px;
+	box-sizing: border-box;
+	margin: 0;
+}
+.plus2{
+	display: block;
+	width: 33.33%;
+	float: left;
+	background: grey;
+	padding: 10px;
+	box-sizing: border-box;
+	margin: 0;
+}
+.plus3{
+	display: block;
+	width: 33.33%;
+	float: left;
+	background: white;
+	padding: 10px;
+	box-sizing: border-box;
+	margin: 0;
+}
+
+/******************************************************fin code main***********************************************************/
+.clear{
+	clear: both;
+}
+/************************************************************fin code body***********************************************************/
+
+footer{
+	display:block; 
+	background: white;
+	opacity: 0.8;
+	float: left;
+	width: 100%;
+	margin: 0 auto;
+	padding: 5px;
+	box-sizing: border-box;
+	font-size:0.8em;
+}
+button{
+	position:relative;
+	cursor:pointer;
+	border:1px black;
+	background:transparent;
+	color:#2c3e50;
+	text-decoration: none;
+}
+button:hover{
+	position:relative;
+	cursor:pointer;
+	border:1px black;
+	background:orange;
+	font-size:80%;
+	color:#2c3e50;
+}
+.'PTsans' p{
+    font-family: 'PT Sans', sans-serif;
+}
+
+
+
+	
+	/*****
+#menuRotate{
+	height:100%;
+	width:100%;
+	margin: 30px auto;
+	background:white;
+	position:relative;
+	overflow:hidden;
+	z-index: 38;
+}
+#menuRotate .masque{
+	position: absolute;
+	z-index: 42;
+	width: 100%;
+	height: 135px;
+	top: 0;
+	left:0;
+	background: white;
+}
+#menuRotate .ombre{
+	position: absolute;
+	z-index: 40;
+	width: 90%;
+	height: 6px;
+	box-shadow: 0 100px 3px black;
+	border-radius: 75px / 3px; 
+	top: 30px;
+	left:5%;
+}
+#menuRotate dl{
+	position: relative;
+	top:0;
+	left: 10%;
+	width:80%;
+	height: 100%;
+	color: #324040;
+	text-align: center;
+	background:#04b3d2;
+	border-radius: 4px;
+	box-shadow: 0 0 6px rgba(0,0,0, 0.7);
+	transform-origin:85% 120px;
+	animation: bounceOut 0.7s ease-in-out;
+}
+#menuRotate dt{
+	position: absolute;
+	bottom: 0;
+	width:100%;
+	height: 30px;
+	padding-top:5px;
+}
+#menuRotate dd{
+transform: rotate(90deg);
+width: 80%;
+	}
+#menuRotate dd a{
+	display: block;
+	height: 50%;
+	padding: 5px 0;
+	margin:2px;
+	color:#324040;
+	text-decoration: none;
+	font-weight: bold;
+	text-align: left;
+	
+}
+#menuRotate dl:hover{transform: rotate(-90deg);
+	animation: bounceIn 0.7s ease-in-out;
+}
+@keyframes bounceIn{
+	from{transform: rotate(0deg);}
+	65%{transform: rotate(-80deg);}
+	90%{transform: rotate(-75deg);}
+	to{transform: rotate(-90deg);}
+}	
+@keyframes bounceOut{
+	from{transform: rotate(0deg);}
+	0%{transform: rotate(-60deg);}
+	10%{transform: rotate(-75deg);}
+	to{transform: rotate(-90deg);}
+}
+button:hover{
+	display: block;
+	background: white;
+}
+
+.exppro ul li ul li:hover{
+	display: block;
+	background: white;
+	color: black;
+	}
+**/	

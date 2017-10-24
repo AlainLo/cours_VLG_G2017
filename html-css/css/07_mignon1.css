@@ -1,0 +1,30 @@
+body{
+    background-color: purple;
+}
+section{
+    width: 60%;
+    margin: 0 auto;
+}
+table{
+    border-collapse: collapse;
+}
+td{
+    width: 4em;
+    height: 4em;
+    border: 1px solid black;
+}
+.yellow{
+    background-color: yellow;
+}
+.black{
+    background-color: black;
+}
+.gray{
+    background-color: gray;
+}
+.white{
+    background-color: white;
+}
+.blue{
+    background-color: blue;
+}

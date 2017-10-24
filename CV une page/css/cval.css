@@ -1,0 +1,365 @@
+*{
+	padding: 0;
+	margin : 0;
+	border: 0 none;
+	outline: 0 none;
+}
+html, body{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+#main-header {
+	background: crimson;
+	position: fixed;
+	height: 60px;
+	width: 100%;
+}
+#main-nav{
+	width: 100%;
+	max-width: 960px;
+	margin: auto;
+}
+#main-nav ul{
+	list-style-type: none;
+	line-height: 60px;
+	text-align: right;
+	text-decoration: none;
+}
+#main-nav ul li{
+	display: inline-block;	
+}
+#main-nav ul li:hover{
+	text-decoration: soft;
+	color: ;
+}
+.page{
+	width: 100%;
+	height: 100%;
+	color: white;
+	padding: 30px 30px;
+	box-sizing: border-box;
+	font-family: "Titillium+Web";
+}
+#presentation{
+	background: darkblue;
+	height: 150px;
+}
+#experiences{
+	background: lightgrey;
+	height:700px;
+}
+#competences{
+	background: darkgrey;
+	height: auto;
+}
+#formation{
+	background: brown;
+	height: 250px;
+}
+h1{
+	text-align: center;
+	font: 24px Bold PTsans, sans-serif;
+}
+h2{
+	text-align: center;
+	font: 18px Bold PTsans, sans-serif;
+	font-weight: 800;
+	display: inline-block;
+	top: 10%;
+}
+p{
+font: 13px 'Titillium Web', sans-serif ;
+padding: 5px;
+}
+.button-container, 
+.button-container1, 
+.button-container2, 
+.button-container3, 
+.button-container4, 
+.button-container5 {
+  width: 95%;
+  position: relative;
+  margin: 100px auto;
+  padding: 5px;
+  perspective: 800px;
+}
+
+.button-container{
+	 top: -85px;
+	 height: 145px;
+}
+.button-container1{
+	 top: -165px;
+	 height: 125px;
+}
+.button-container2{
+	 top: -245px;
+	 height: 125px;
+}
+.button-container3{
+	 top: -325px;
+	 height: 105px;
+}
+.button-container4{
+	 top: -85px;
+	 height: 185px;
+}
+.button-container5{
+	 top: -85px;
+	 height: 185px;
+}
+.button-container label, 
+.button-container1 label, 
+.button-container2 label, 
+.button-container3 label, 
+.button-container4 label, 
+.button-container5 label {
+  position: absolute;
+  width: 0;
+  height: 0;
+  z-index: 2;
+  cursor: pointer;
+}
+/*.button-container .l, 
+.button-container1 .1, 
+.button-container2 .l, 
+.button-container3 .l, 
+.button-container4 .l, 
+.button-container5 .l {
+  width: 110px;
+  height: 110px;
+  transform: rotate(-45deg) skew(20deg, 20deg);
+  top: -4px;
+  left: -53px;
+}*/
+.button-container .r, 
+.button-container1 .r, 
+.button-container2 .r, 
+.button-container3 .r,
+.button-container4 .r,
+.button-container5 .r {
+  width: 110px;
+  height: 110px;
+  transform: rotate(-45deg) skew(20deg, 20deg);
+  top: -4px;
+  right: -53px;
+}
+.button-container .t, 
+.button-container1 .t, 
+.button-container2 .t, 
+.button-container3 .t, 
+.button-container4 .t, 
+.button-container5 .t 
+ {
+  width: 130px;
+  height: 130px;
+  transform: rotate(-45deg) skew(20deg, 20deg);
+  top: -64px;
+  left: 58px;
+}
+/*.button-container .b, 
+.button-container1 .b, 
+.button-container2 .b, 
+.button-container3 .b,
+.button-container4 .b,
+.button-container5 .b {
+  width: 130px;
+  height: 130px;
+  transform: rotate(-45deg) skew(20deg, 20deg);
+  bottom: -64px;
+  left: 58px;
+}*/
+.button-container input, 
+.button-container1 input, 
+.button-container2 input, 
+.button-container3 input,
+.button-container4 input,
+.button-container5 input{
+  position: absolute;
+  clip: rect(3px, 3px, 3px, 3px);
+}
+/*.button-container input[value="l"]:checked ~ label,
+.button-container1 input[value="l"]:checked ~ label,
+.button-container2 input[value="l"]:checked ~ label,
+.button-container3 input[value="l"]:checked ~ label,
+.button-container4 input[value="l"]:checked ~ label,
+.button-container5 input[value="l"]:checked ~ label,*/
+.button-container input[value="r"]:checked ~ label,
+.button-container1 input[value="r"]:checked ~ label,
+.button-container2 input[value="r"]:checked ~ label,
+.button-container3 input[value="r"]:checked ~ label,
+.button-container4 input[value="r"]:checked ~ label,
+.button-container5 input[value="r"]:checked ~ label,
+.button-container input[value="t"]:checked ~ label,
+.button-container1 input[value="t"]:checked ~ label,
+.button-container2 input[value="t"]:checked ~ label,
+.button-container3 input[value="t"]:checked ~ label,
+.button-container4 input[value="t"]:checked ~ label,
+.button-container5 input[value="t"]:checked ~ label,
+.button-container input[value="b"]:checked ~ label,
+/*.button-container1 input[value="b"]:checked ~ label,
+.button-container2 input[value="b"]:checked ~ label,
+.button-container3 input[value="b"]:checked ~ label,
+.button-container4 input[value="b"]:checked ~ label,
+.button-container5 input[value="b"]:checked ~ label{
+  display: none;
+}*/
+/*.button-container input[value="l"]:checked ~ .button,
+.button-container1 input[value="l"]:checked ~ .button1,
+.button-container2 input[value="l"]:checked ~ .button2,
+.button-container3 input[value="l"]:checked ~ .button3,
+.button-container4 input[value="l"]:checked ~ .button4,
+.button-container5 input[value="l"]:checked ~ .button5 {
+  transform: rotateY(180deg);*/
+}
+.button-container input[value="r"]:checked ~ .button,
+.button-container1 input[value="r"]:checked ~ .button1,
+.button-container2 input[value="r"]:checked ~ .button2,
+.button-container3 input[value="r"]:checked ~ .button3,
+.button-container4 input[value="r"]:checked ~ .button4,
+.button-container5 input[value="r"]:checked ~ .button5{
+  transform: rotateY(-180deg);
+}
+.button-container input[value="t"]:checked ~ .button,
+.button-container1 input[value="t"]:checked ~ .button1,
+.button-container2 input[value="t"]:checked ~ .button2,
+.button-container3 input[value="t"]:checked ~ .button3,
+.button-container4 input[value="t"]:checked ~ .button4,
+.button-container5 input[value="t"]:checked ~ .button5 {
+  transform: rotateX(-180deg);
+}
+/*.button-container input[value="b"]:checked ~ .button,
+.button-container1 input[value="b"]:checked ~ .button1,
+.button-container2 input[value="b"]:checked ~ .button2,
+.button-container3 input[value="b"]:checked ~ .button3,
+.button-container4 input[value="b"]:checked ~ .button4,
+.button-container5 input[value="b"]:checked ~ .button5 {
+  transform: rotateX(180deg);*/
+}
+/*.button-container input[value="l"]:checked ~ .button .button-back,
+.button-container1 input[value="l"]:checked ~ .button1 .button-back1,
+.button-container2 input[value="l"]:checked ~ .button2 .button-back2,
+.button-container3 input[value="l"]:checked ~ .button3 .button-back3,
+.button-container4 input[value="l"]:checked ~ .button4 .button-back4,
+.button-container5 input[value="l"]:checked ~ .button5 .button-back5,*/
+.button-container input[value="r"]:checked ~ .button .button-back,
+.button-container1 input[value="r"]:checked ~ .button1 .button-back1,
+.button-container2 input[value="r"]:checked ~ .button2 .button-back2,
+.button-container3 input[value="r"]:checked ~ .button3 .button-back3,
+.button-container4 input[value="r"]:checked ~ .button4 .button-back4,
+.button-container5 input[value="r"]:checked ~ .button4 .button-back5,
+.button-container input[value="t"]:checked ~ .button .button-back,
+.button-container1 input[value="t"]:checked ~ .button1 .button-back1,
+.button-container2 input[value="t"]:checked ~ .button2 .button-back2,
+.button-container3 input[value="t"]:checked ~ .button3 .button-back3,
+.button-container4 input[value="t"]:checked ~ .button4 .button-back4,
+.button-container5 input[value="t"]:checked ~ .button5 .button-back5,
+/*.button-container input[value="b"]:checked ~ .button .button-back,
+.button-container1 input[value="b"]:checked ~ .button1 .button-back1,
+.button-container2 input[value="b"]:checked ~ .button2 .button-back2,
+.button-container3 input[value="b"]:checked ~ .button3 .button-back3,
+.button-container4 input[value="b"]:checked ~ .button4 .button-back4,
+.button-container5 input[value="b"]:checked ~ .button5 .button-back5 {
+  box-shadow: 0 0 20px rgba(0,0,0,0.6);
+}*/
+.button-container input[value="t"]:checked ~ .button .button-back,
+.button-container1 input[value="t"]:checked ~ .button1 .button-back1,
+.button-container2 input[value="t"]:checked ~ .button2 .button-back2,
+.button-container3 input[value="t"]:checked ~ .button3 .button-back3,
+.button-container4 input[value="t"]:checked ~ .button4 .button-back4,
+.button-container5 input[value="t"]:checked ~ .button5 .button-back5,
+/*.button-container input[value="b"]:checked ~ .button .button-back,
+.button-container1 input[value="b"]:checked ~ .button1 .button-back1,
+.button-container2 input[value="b"]:checked ~ .button2 .button-back2,
+.button-container3 input[value="b"]:checked ~ .button3 .button-back3
+.button-container4 input[value="b"]:checked ~ .button4 .button-back4
+.button-container5 input[value="b"]:checked ~ .button5 .button-back5 {
+  transform: translateZ(-1px) rotateX(180deg);
+}*/
+/*.button-container label.l:hover ~ .button,
+.button-container1 label.l:hover ~ .button1,
+.button-container2 label.l:hover ~ .button2,
+.button-container3 label.l:hover ~ .button3,
+.button-container4 label.l:hover ~ .button4,
+.button-container5 label.l:hover ~ .button5{
+  transform: rotateY(20deg);
+}*/
+.button-container label.r:hover ~ .button,
+.button-container1 label.r:hover ~ .button1,
+.button-container2 label.r:hover ~ .button2,
+.button-container3 label.r:hover ~ .button3,
+.button-container4 label.r:hover ~ .button4,
+.button-container5 label.r:hover ~ .button5{
+  transform: rotateY(-20deg);
+}
+.button-container label.t:hover ~ .button,
+.button-container1 label.t:hover ~ .button1,
+.button-container2 label.t:hover ~ .button2,
+.button-container3 label.t:hover ~ .button3,
+.button-container4 label.t:hover ~ .button4,
+.button-container5 label.t:hover ~ .button5  {
+  transform: rotateX(-20deg);
+}
+/*.button-container label.b:hover ~ .button,
+.button-container1 label.b:hover ~ .button1,
+.button-container2 label.b:hover ~ .button2,
+.button-container3 label.b:hover ~ .button3,
+.button-container4 label.b:hover ~ .button4,
+.button-container5 label.b:hover ~ .button5 {
+  transform: rotateX(20deg);
+}*/
+.button-container .button,
+.button-container1 .button1,
+.button-container2 .button2,
+.button-container3 .button3,
+.button-container4 .button4,
+.button-container5 .button5{
+  transform-style: preserve-3d;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s cubic-bezier(.07,1.2,.98,1.25) 0s;
+}
+.button-container .button-front,
+.button-container1 .button-front1,
+.button-container2 .button-front2,
+.button-container3 .button-front3,
+.button-container4 .button-front4,
+.button-container5 .button-front5 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  pointer-events: none;
+  color: #333;
+  font: PTsans sans-serif 15px;
+  text-align: center;
+  line-height: 60px;
+  backface-visibility: hidden;
+  padding: 5px;
+}
+.button-container .button-back,
+.button-container1 .button-back1,
+.button-container2 .button-back2,
+.button-container3 .button-back3,
+.button-container4 .button-back4,
+.button-container5 .button-back5{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #f44336;
+  transform: translateZ(-1px) rotateY(180deg);
+  color: #fff;
+  font: 14px/1.4 sans-serif;
+  text-align: left;
+  line-height: 1.5em;
+  backface-visibility: hidden;
+  transition: box-shadow 0.5s ease 0s;
+  padding: 5px;
+}
+.button-front span{
+	font: PTsans 9px italic;
+	display: block;
+	bottom: 12px;
+}

@@ -1,0 +1,30 @@
+<!-- http://www.w3schools.com/ajax/ajax_examples.asp -->
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="demo"><h2>AJAX GET</h2></div>
+
+<button type="button" id="action">Charger fichier txt</button>
+
+<script>
+document.getElementById("action").addEventListener("click", loadDoc);
+
+function loadDoc()
+{
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (xhttp.readyState == 4 && xhttp.status == 200) {
+      document.getElementById("demo").innerHTML = xhttp.responseText;
+    }
+  }
+  xhttp.open("GET", "ajax_info.txt", true);
+  xhttp.send();
+}
+
+// ReadyState 4 = Loaded     see: http://www.w3.org/TR/2006/WD-XMLHttpRequest-20060405/
+// status 200 = ok           see: http://en.wikipedia.org/wiki/List_of_HTTP_status_codes
+</script>
+
+</body>
+</html>
